@@ -566,7 +566,9 @@ public class KItem extends Term implements KItemRepresentation {
                                         sb.append("Candidate results:\n");
                                         sb.append(result).append("\n");
                                         sb.append(rightHandSide).append("\n");
-                                        throw KEMException.criticalError(sb.toString());
+                                        //throw KEMException.criticalError(sb.toString());
+                                        kem.registerCriticalWarning(sb.toString());
+                                        continue;
                                     }
                                 }
                                 RuleAuditing.succeed(rule);
