@@ -301,6 +301,7 @@ public class Definition extends JavaSymbolicObject {
             rules.add(rule);
             if (rule.att().contains(Att.specification())) {
                 specRules.add(rule);
+                specRules.sort(Rule::compareTo);
             }
         }
     }
